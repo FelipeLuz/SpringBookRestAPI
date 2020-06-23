@@ -1,0 +1,281 @@
+{
+	"id": "485b23ea-4c27-4bad-8c7a-ba664871dda0",
+	"name": "CodeServer-SampleRequestsForPatchAPI",
+	"timestamp": "2020-06-23T01:58:35.230Z",
+	"collection_id": "61b80a95-6aad-4cac-8484-fa5ac348edc7",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 17,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "1f54d27c-26e1-4b45-aa34-c47662dda985",
+			"name": "Patch - Full Payload - Expect 200 with changed fields",
+			"url": "http://localhost:8080/api/v2/projects/5",
+			"time": 18,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Fields in request payload are updated": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Fields in request payload are updated": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				18
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Fields in request payload are updated": true
+				}
+			]
+		},
+		{
+			"time": 18,
+			"responseCode": {
+				"code": 409,
+				"name": "Conflict"
+			},
+			"tests": {},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				},
+				"Only fields available in request payload are updated": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Name is nullified": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				12,
+				15,
+				15,
+				18,
+				18
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Only fields available in request payload are updated": true
+				},
+				{
+					"Status code is 200": true,
+					"Name is nullified": true
+				},
+				{
+					"Status code is 200": true,
+					"Name is nullified": true
+				},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "3f34ee3e-ffc8-4b04-9291-ed5e8674d752",
+			"name": "Patch - Payload with only sdlcSystem.id - Expect 200 and same name / externalId",
+			"url": "http://localhost:8080/api/v2/projects/7",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Only fields available in request payload are updated": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Only fields available in request payload are updated": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Only fields available in request payload are updated": true
+				}
+			]
+		},
+		{
+			"id": "27a17f3c-4a59-4767-9525-093dc9160313",
+			"name": "Patch - Payload Containing Conflicting System / External ID - Expect 409",
+			"time": 21,
+			"responseCode": {
+				"code": 409,
+				"name": "Conflict"
+			},
+			"tests": {},
+			"testPassFailCounts": {
+				"Status code is 409": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				21,
+				21
+			],
+			"allTests": [
+				{
+					"Status code is 409": true
+				},
+				{}
+			]
+		},
+		{
+			"id": "24cfe4be-4196-41b8-9ca7-d8ed6893d2be",
+			"name": "Patch - Illegal Path Variables - Expect 400",
+			"url": "http://localhost:8080/api/v2/projects/whatever",
+			"time": 12,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Status code is 400": true
+				}
+			]
+		},
+		{
+			"id": "a8d18668-0650-4cb0-abcb-672af4676058",
+			"name": "Patch - Invalid Path Variables - Expect 404",
+			"url": "http://localhost:8080/api/v2/projects/1234",
+			"time": 13,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 177,
+	"collection": {
+		"requests": [
+			{
+				"id": "1f54d27c-26e1-4b45-aa34-c47662dda985",
+				"method": "PATCH"
+			},
+			{
+				"method": "PATCH"
+			},
+			{
+				"id": "3f34ee3e-ffc8-4b04-9291-ed5e8674d752",
+				"method": "PATCH"
+			},
+			{
+				"id": "11dead43-58fd-4072-97dd-805eac2dc578",
+				"method": "PATCH"
+			},
+			{},
+			{
+				"id": "11dead43-58fd-4072-97dd-805eac2dc578",
+				"method": "PATCH"
+			},
+			{
+				"method": "PATCH"
+			},
+			{
+				"id": "f5925e0b-6023-4ce2-8c29-a07ad0696f63",
+				"method": "PATCH"
+			},
+			{
+				"method": "PATCH"
+			},
+			{
+				"id": "f5925e0b-6023-4ce2-8c29-a07ad0696f63",
+				"method": "PATCH"
+			},
+			{
+				"id": "42a81ea9-0d07-4a9b-9c96-1467123c3094",
+				"method": "PATCH"
+			},
+			{},
+			{
+				"id": "a6131109-c7f5-492d-b2dd-f795fd292f06",
+				"method": "PATCH"
+			},
+			{
+				"id": "0b6e20fe-27ce-4bb5-8066-67343d764b99",
+				"method": "PATCH"
+			},
+			{},
+			{
+				"method": "PATCH"
+			},
+			{
+				"id": "27a17f3c-4a59-4767-9525-093dc9160313",
+				"method": "PATCH"
+			},
+			{
+				"method": "PATCH"
+			},
+			{},
+			{
+				"id": "27a17f3c-4a59-4767-9525-093dc9160313",
+				"method": "PATCH"
+			},
+			{},
+			{
+				"id": "24cfe4be-4196-41b8-9ca7-d8ed6893d2be",
+				"method": "PATCH"
+			},
+			{
+				"id": "a8d18668-0650-4cb0-abcb-672af4676058",
+				"method": "PATCH"
+			}
+		]
+	}
+}

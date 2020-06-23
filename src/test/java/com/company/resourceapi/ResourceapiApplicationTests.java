@@ -53,7 +53,7 @@ public class ResourceapiApplicationTests {
 	}
 
 	@Test
-	public void WhenPostProjectInValid_ThenNotFound() throws Exception {
+	public void WhenPostProjectInvalid_ThenNotFound() throws Exception {
 		mockMvc.perform(MockMvcRequestBuilders
 				.post(ENDPOINT)
 				.contentType(MediaType.APPLICATION_JSON)
@@ -62,7 +62,7 @@ public class ResourceapiApplicationTests {
 	}
 
 	@Test
-	public void WhenPostProjectInValidField_ThenBadRequest() throws Exception {
+	public void WhenPostProjectInvalidField_ThenBadRequest() throws Exception {
 		mockMvc.perform(MockMvcRequestBuilders
 				.post(ENDPOINT)
 				.contentType(MediaType.APPLICATION_JSON)

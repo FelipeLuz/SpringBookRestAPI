@@ -1,7 +1,7 @@
 {
-	"id": "caf1503c-010d-42a1-ab3a-1ce14893f743",
+	"id": "d70f865b-51fa-48aa-a467-622f90d76331",
 	"name": "CodeServer-SampleRequestsForGetAPI",
-	"timestamp": "2020-06-22T02:55:47.770Z",
+	"timestamp": "2020-06-23T01:56:50.868Z",
 	"collection_id": "d2304499-6f56-47c6-84a8-fb590096975b",
 	"folder_id": 0,
 	"environment_id": "0",
@@ -12,25 +12,34 @@
 			"id": "4edc67ec-3fc9-4867-9287-a8bdbd8c1413",
 			"name": "Get - Expect 200",
 			"url": "http://localhost:8080/api/v2/projects/1",
-			"time": 29,
+			"time": 9,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
 			},
-			"tests": {},
-			"testPassFailCounts": {},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
 			"times": [
-				29
+				9
 			],
 			"allTests": [
-				{}
+				{
+					"Status code is 200": true
+				}
 			]
 		},
 		{
 			"id": "cf3d1f10-3cf9-4907-86af-97b2ee036fef",
 			"name": "Get - Illegal Path Variables - Expect 400",
 			"url": "http://localhost:8080/api/v2/projects/whatever",
-			"time": 12,
+			"time": 6,
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request"
@@ -38,7 +47,7 @@
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				12
+				6
 			],
 			"allTests": [
 				{}
@@ -48,7 +57,7 @@
 			"id": "aa8e2a7a-ae01-4ecd-8026-aa012606270c",
 			"name": "Get - Invalid Path Variables - Expect 400",
 			"url": "http://localhost:8080/api/v2/projects/whatever",
-			"time": 10,
+			"time": 9,
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request"
@@ -63,7 +72,7 @@
 				}
 			},
 			"times": [
-				10
+				9
 			],
 			"allTests": [
 				{
@@ -73,7 +82,7 @@
 		}
 	],
 	"count": 1,
-	"totalTime": 51,
+	"totalTime": 24,
 	"collection": {
 		"requests": [
 			{
